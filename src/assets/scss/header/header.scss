@@ -1,0 +1,44 @@
+body {
+}
+/*Header*/
+header{
+  height: 415px;
+  padding: 4em;
+  background-color: #00adb5;
+}
+h1 {
+  text-align: center;
+}
+.intro{
+  color: #EEEEEE;
+  box-sizing: border-box;
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid black;
+    font-size: 150%;
+    text-align: center;
+    white-space: nowrap;
+   overflow: hidden;
+    transform: translateY(-50%);    
+}
+@media screen and (max-width: 720px) {
+  .intro {
+    font-size: 110%;
+  }
+}
+.intro-anim{
+          animation: intro 2s steps(30) 1s 1 normal both,
+             textCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes intro{
+  from{width: 0;}
+  to{width: 19em;}
+}
+
+@keyframes textCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
